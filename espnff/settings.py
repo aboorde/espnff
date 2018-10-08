@@ -9,10 +9,6 @@ class Settings(object):
         self.playoff_team_count = data['leaguesettings']['playoffTeamCount']
         self.id = data['leaguesettings']['id']
         self.keeper_count = data['leaguesettings']['futureKeeperCount']
-        try:
-            self.trade_deadline = data['leaguesettings']['tradeDeadline']
-        except:
-            self.trade_deadline = 'Unknown'
         self.name = data['leaguesettings']['name']
         self.status = data['metadata']['status']
         self.year = data['metadata']['seasonId']

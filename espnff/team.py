@@ -1,6 +1,7 @@
 class Team(object):
     '''Teams are part of the league'''
     def __init__(self, data):
+        self.test = data
         self.team_id = data['teamId']
         self.team_abbrev = data['teamAbbrev']
         self.team_name = "%s %s" % (data['teamLocation'], data['teamNickname'])
@@ -15,6 +16,7 @@ class Team(object):
         self.schedule = []
         self.scores = []
         self.mov = []
+        self.roster = []
         self._fetch_schedule(data)
 
     def __repr__(self):
